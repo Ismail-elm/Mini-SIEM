@@ -1,11 +1,3 @@
-"""
-Mini SIEM - Log Analyzer & Intrusion Detection System
-Auteur  : [Ton nom]
-GitHub  : [Ton repo]
-Objectif: Parser des logs SSH/Apache, détecter des comportements suspects,
-          générer un rapport HTML d'alertes.
-"""
-
 import re
 import json
 from collections import defaultdict
@@ -17,8 +9,8 @@ from pathlib import Path
 # CONFIG
 # ─────────────────────────────────────────────
 
-BRUTE_FORCE_THRESHOLD = 5   # tentatives échouées avant alerte
-HTTP_ERROR_THRESHOLD  = 10  # erreurs 4xx/5xx par IP avant alerte
+BRUTE_FORCE_THRESHOLD = 5   
+HTTP_ERROR_THRESHOLD  = 10  
 
 SAMPLE_SSH_LOG = """
 Jan 10 10:00:01 server sshd[1234]: Failed password for root from 192.168.1.100 port 22 ssh2
